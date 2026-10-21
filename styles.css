@@ -24,7 +24,7 @@ a:focus-visible,button:focus-visible { outline:3px solid var(--lime); outline-of
 .topbar__phone:hover { border-color:var(--hot); background:var(--hot); }
 .phone-dot,.open-mark { width:7px; height:7px; border-radius:50%; background:var(--lime); box-shadow:0 0 0 4px rgba(215,237,101,.16); }
 .menu-toggle,.mobile-nav { display:none; }
-.hero { min-height:735px; height:min(900px,100svh); min-height:min(735px,100svh); display:grid; grid-template-columns:1.03fr .97fr; position:relative; isolation:isolate; overflow:hidden; }
+.hero { min-height:735px; height:min(900px,100vh); height:min(900px,100svh); min-height:min(735px,100vh); min-height:min(735px,100svh); display:grid; grid-template-columns:1.03fr .97fr; position:relative; isolation:isolate; overflow:hidden; }
 .hero__photo { position:relative; grid-column:1 / -1; grid-row:1; overflow:hidden; background:#302a25; }
 .hero__photo img { width:100%; height:100%; position:absolute; inset:0; object-fit:cover; object-position:center 53%; opacity:.91; transform:scale(1.01); transition:opacity .45s ease,transform 7s linear; }
 .hero__photo.is-changing img { opacity:.35; transform:scale(1.055); }
@@ -80,7 +80,14 @@ a:focus-visible,button:focus-visible { outline:3px solid var(--lime); outline-of
 .menu-card--paper::after { content:'♉'; position:absolute; z-index:-2; top:62px; right:15px; color:rgba(237,76,44,.12); font-size:145px; }
 .menu-card--red { background:#812c1f; }
 .menu-card--red::after { content:'СПБ'; position:absolute; z-index:-2; top:70px; left:-16px; color:rgba(255,255,255,.13); font:800 83px/.8 var(--head); letter-spacing:-.1em; transform:rotate(-90deg) translateX(-100%); transform-origin:left top; }
-.menu-card--photo { background:#46372b url('assets/hero-alt.webp') center 56%/cover; }
+.menu-card--photo { background:#46372b; }
+.menu-card__image { position:absolute; z-index:-2; inset:0; display:block; overflow:hidden; }
+.menu-card__image img { width:100%; height:100%; display:block; object-fit:cover; opacity:.84; transform:scale(1.04); }
+.menu-card--photo-main .menu-card__image img { object-position:center 55%; }
+.menu-card--photo-alt .menu-card__image img { object-position:center 56%; }
+.menu-card--photo-shift .menu-card__image img { object-position:65% center; }
+.menu-card--paper .menu-card__image img { opacity:.58; filter:saturate(.82) contrast(1.05); }
+.menu-card--feature .menu-card__image img,.menu-card--red .menu-card__image img { opacity:.68; }
 .menu-card--top { font-size:8px; font-weight:700; letter-spacing:.13em; }
 .menu-card__top { display:flex; align-items:center; justify-content:space-between; font-size:8px; font-weight:700; letter-spacing:.12em; }
 .menu-card__spark { color:var(--lime); font-size:15px; }
@@ -145,7 +152,7 @@ a:focus-visible,button:focus-visible { outline:3px solid var(--lime); outline-of
   .nav { gap:20px; }
   .nav a { font-size:10px; }
   .topbar__phone { padding:0 10px; font-size:10px; }
-  .hero { min-height:660px; height:82svh; grid-template-columns:1fr; }
+  .hero { min-height:660px; height:82vh; height:82svh; grid-template-columns:1fr; }
   .hero__copy { width:min(590px,83%); grid-column:1; margin-left:6%; }
   .hero__photo-index { top:105px; }
   .hero__stamp { right:16%; bottom:76px; }
@@ -172,7 +179,7 @@ a:focus-visible,button:focus-visible { outline:3px solid var(--lime); outline-of
   .mobile-nav:not([hidden]) { display:grid; }
   .mobile-nav a { min-height:45px; border-bottom:1px solid rgba(255,255,255,.12); display:flex; align-items:center; justify-content:space-between; color:white; font:600 14px var(--head); text-decoration:none; }
   .mobile-nav a span { color:var(--lime); font:600 9px var(--body); }
-  .hero { min-height:750px; height:100svh; max-height:920px; }
+  .hero { min-height:750px; height:100vh; height:100svh; max-height:920px; }
   .hero__photo img { object-position:60% center; }
   .hero__shade { background:linear-gradient(90deg,rgba(14,15,14,.83),rgba(16,16,15,.35)),linear-gradient(0deg,rgba(16,16,15,.69),transparent 39%); }
   .hero__copy { width:auto; max-width:490px; margin:72px 20px 65px; align-self:end; }
