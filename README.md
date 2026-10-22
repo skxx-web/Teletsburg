@@ -6,7 +6,7 @@
 
 После включения GitHub Pages сайт доступен по адресу:
 
-<https://kirikxxx1-svg.github.io/Teletsburg/>
+<https://skxx-web.github.io/Teletsburg/>
 
 ## Как изменить сайт
 
